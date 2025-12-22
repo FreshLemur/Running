@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Run</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Lobster&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Lobster&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Lobster&family=Righteous&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <section class="hero">
+        <img
+          class="hero__image"
+          src="./assets/images/hero-800.webp"
+          srcset="
+            ./assets/images/hero-400.webp   400w,
+            ./assets/images/hero-800.webp   800w,
+            ./assets/images/hero-1200.webp 1200w,
+            ./assets/images/hero-2000.webp 2000w
+          "
+          alt="Runners participating in a marathon for change"
+          sizes="100vw"
+        />
+        <div class="hero__content-wrapper">
+          <div class="hero__card">
+            <div class="hero__info-group">
+              <span class="caption">Location:</span>
+              <p class="caption">Green Bay Trail, Glencoe, IL</p>
+            </div>
+
+            <div class="hero__info-group">
+              <span class="caption">Date</span>
+              <p class="caption">May 12, 2025</p>
+            </div>
+
+            <div class="hero__info-group">
+              <span class="caption">Time</span>
+              <p class="caption">6AM - NOON</p>
+            </div>
+          </div>
+
+          <button class="hero__btn hero__btn--primary link">REGISTER</button>
+        </div>
+      </section>
+      <section class="stride-together">
+        <img
+          class="stride-together__image"
+          src="./assets/images/stride-together-800.webp"
+          srcset="
+            ./assets/images/stride-together-400.webp   400w,
+            ./assets/images/stride-together-800.webp   800w,
+            ./assets/images/stride-together-1200.webp 1200w,
+            ./assets/images/stride-together-2000.webp 2000w
+          "
+          alt="A paved asphalt path with yellow dividing lines, captured from a low angle perspective"
+          sizes="100vw"
+        />
+        <div class="stride-together__container">
+          <h2 class="stride-together__heading heading-2">
+            Stride Together,<br />
+            Shape Tomorrow.
+          </h2>
+
+          <p class="stride-together__description paragraph-1">
+            Ditch the gridlock and embrace the open road. Run, donate, or bring the vibe as we create pathways for a
+            healthier, more connected community, one step at a time.
+          </p>
+
+          <a href="#" class="stride-together__link link--newsletter link">
+            NEWSLETTER <img src="/assets/svg/arrow.svg" alt="Arrow" />
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

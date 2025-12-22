@@ -1,0 +1,295 @@
+:root {
+  --color-white: #ffffff;
+  --color-black-primary: #000000;
+  --color-black-secondary: #202020;
+  --color-black-opacity: #1d1d1de5;
+  --color-gray-primary: #aaaaaa;
+  --color-gray-secondary: #404040;
+  --color-lime: #95ff8d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+/* ============================================================
+   1. MOBILE STYLES (Default: 0px to 799px)
+   Everything outside of a media query applies to mobile first.
+   ============================================================ */
+.heading-1 {
+  font-family: Righteous;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  line-height: 90%;
+  letter-spacing: -3%;
+  vertical-align: middle;
+}
+
+.heading-2 {
+  font-family: Righteous;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 50px;
+  line-height: 90%;
+  letter-spacing: -3%;
+}
+.heading-4 {
+  font-family: Roboto Flex;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -3%;
+  vertical-align: middle;
+}
+.link-menu {
+  font-family: Righteous;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 22px;
+  line-height: 90%;
+  letter-spacing: -3%;
+}
+
+.caption {
+  font-family: Roboto Mono;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 90%;
+  letter-spacing: -3%;
+}
+
+.link {
+  font-family: Roboto Mono;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -3%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  text-decoration-skip-ink: auto;
+}
+
+.paragraph-1 {
+  font-family: Roboto Flex;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: -3%;
+}
+
+.hero__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width: fit-content;
+  padding: 12px 19px;
+  border-radius: 24.5px;
+  background-color: var(--color-lime);
+  color: #3c6638;
+}
+
+.link--newsletter {
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24.5px;
+  background-color: var(--color-gray-secondary);
+  color: var(--color-lime);
+  padding: 12px 19px;
+}
+.hero {
+  position: relative;
+  padding: 12px 20px;
+  display: flex;
+  align-items: end;
+  width: 100vw;
+  height: 710px;
+}
+
+.hero__image {
+  position: absolute;
+  height: 710px;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.hero__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.hero__card {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--color-black-opacity);
+}
+
+.hero__info-group {
+  width: 224px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--color-white);
+}
+
+.hero__card,
+.hero__btn--primary {
+  position: relative;
+  z-index: 2;
+}
+
+.stride-together {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 525px;
+  width: 100%;
+  position: relative;
+}
+
+.stride-together__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 525px;
+  object-fit: cover;
+}
+
+.stride-together__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  z-index: 2;
+  padding: 32px 16px;
+  background-color: var(--color-black-opacity);
+  width: 100%;
+}
+
+.stride-together__heading {
+  color: var(--color-white);
+  text-align: center;
+}
+
+.stride-together__description {
+  text-align: center;
+  color: var(--color-white);
+  width: 318px;
+}
+/* ============================================================
+   2. TABLET STYLES (800px and up)
+   This overrides mobile styles once the screen hits 800px.
+   ============================================================ */
+@media screen and (min-width: 800px) {
+  .heading-1 {
+    font-size: 80px;
+  }
+
+  .heading-2 {
+    font-size: 64px;
+  }
+
+  .heading-4 {
+    font-size: 32px;
+  }
+
+  .link-menu {
+    font-size: 25.97px;
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    height: 700px;
+  }
+
+  .hero__image {
+    height: 700px;
+  }
+
+  .hero__content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero__card {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .hero__info-group {
+    width: fit-content;
+  }
+
+  .stride-together {
+    height: 475px;
+  }
+
+  .stride-together__image {
+    height: 475px;
+  }
+}
+
+/* ============================================================
+   3. DESKTOP STYLES (1280px and up)
+   This overrides tablet styles once the screen hits 1280px.
+   ============================================================ */
+@media screen and (min-width: 1280px) {
+  .heading-1 {
+    font-size: 130px;
+  }
+  .heading-2 {
+    font-size: 120px;
+  }
+  .heading-4 {
+    font-size: 48px;
+  }
+
+  .hero {
+    height: 745px;
+    padding-block: 40px;
+  }
+
+  .hero__image {
+    height: 745px;
+  }
+
+  .stride-together {
+    height: 700px;
+  }
+
+  .stride-together__image {
+    height: 700px;
+  }
+}
