@@ -55,7 +55,7 @@
             </div>
           </div>
 
-          <button class="hero__btn hero__btn--primary link">REGISTER</button>
+          <a href="#" class="hero__btn hero__btn--primary link">REGISTER</a>
         </div>
       </section>
       <section class="stride-together">
@@ -90,22 +90,30 @@
       <div class="raised-cta-wrapper">
         <section class="raised">
           <div class="raised__content">
-            <h2 class="raised__heading">30K Raised</h2>
-            <p class="raised__subheading">By North Shore residents</p>
-            <a href="#" class="raised__button">ABOUT US</a>
+            <div class="raised__text-group">
+              <h2 class="raised__heading heading-2">30K Raised</h2>
+              <p class="raised__subheading paragraph-1">By North Shore residents</p>
+            </div>
+            <a href="#" class="raised__link hero__btn hero__btn--primary link">ABOUT US</a>
           </div>
           <img
-            src="runner-back.jpg"
+            src="./assets/images/raised-800.webp"
+            srcset="
+              ./assets/images/raised-800.webp   800w,
+              ./assets/images/raised-1200.webp 1200w,
+              ./assets/images/raised-2000.webp 2000w
+            "
             alt="A runner seen from behind jogging on a paved trail through a hilly landscape"
             class="raised__bg-image"
           />
         </section>
 
         <section class="cta">
-          <h2 class="cta__heading">Don’t Miss a Step</h2>
-          <p class="cta__description">Get the latest updates and details about the event.</p>
-
-          <a href="#" class="cta__button cta__button--newsletter"> NEWSLETTER <span class="cta__icon">↗</span> </a>
+          <h2 class="cta__heading heading-2">Don’t Miss a Step</h2>
+          <p class="cta__description paragraph-1">Get the latest updates and details about the event.</p>
+          <a href="#" class="stride-together__link link--newsletter link">
+            NEWSLETTER <img src="/assets/svg/arrow.svg" alt="Arrow" />
+          </a>
         </section>
       </div>
     </main>

@@ -5,6 +5,7 @@
   --color-black-opacity: #1d1d1de5;
   --color-gray-primary: #aaaaaa;
   --color-gray-secondary: #404040;
+  --color-gray: #999999;
   --color-lime: #95ff8d;
 }
 
@@ -206,6 +207,70 @@ button {
   color: var(--color-white);
   width: 318px;
 }
+
+.raised-cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.raised,
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  padding: 24px 40px;
+}
+
+.raised__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.raised__text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.raised__heading,
+.cta__heading,
+.raised__subheading {
+  color: var(--color-white);
+  text-align: center;
+}
+
+.raised__link {
+  text-decoration: none;
+}
+
+.raised__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.cta {
+  gap: 30px;
+  background-color: var(--color-black-secondary);
+}
+
+.cta__description {
+  color: var(--color-gray);
+  text-align: center;
+}
 /* ============================================================
    2. TABLET STYLES (800px and up)
    This overrides mobile styles once the screen hits 800px.
@@ -259,6 +324,20 @@ button {
   .stride-together__image {
     height: 475px;
   }
+
+  .raised-cta-wrapper {
+    flex-direction: row;
+  }
+
+  .raised,
+  .cta {
+    width: 50%;
+    height: 550px;
+  }
+
+  .raised__bg-image {
+    height: 550px;
+  }
 }
 
 /* ============================================================
@@ -291,5 +370,15 @@ button {
 
   .stride-together__image {
     height: 700px;
+  }
+
+  .raised,
+  .cta {
+    padding-inline: 75px;
+    height: 800px;
+  }
+
+  .raised__bg-image {
+    height: 800px;
   }
 }
