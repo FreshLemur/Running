@@ -271,6 +271,23 @@ button {
   color: var(--color-gray);
   text-align: center;
 }
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--color-lime);
+  height: 400px;
+}
+
+.mission__heading {
+  color: var(--color-black-secondary);
+}
+
+.stride-together__link {
+  width: fit-content;
+}
 /* ============================================================
    2. TABLET STYLES (800px and up)
    This overrides mobile styles once the screen hits 800px.
@@ -338,6 +355,10 @@ button {
   .raised__bg-image {
     height: 550px;
   }
+
+  .mission {
+    height: 550px;
+  }
 }
 
 /* ============================================================
@@ -380,5 +401,9 @@ button {
 
   .raised__bg-image {
     height: 800px;
+  }
+
+  .mission {
+    height: 700px;
   }
 }
