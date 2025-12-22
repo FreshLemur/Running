@@ -21,6 +21,15 @@ button {
   border: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
 /* ============================================================
    1. MOBILE STYLES (Default: 0px to 799px)
    Everything outside of a media query applies to mobile first.
@@ -288,6 +297,56 @@ button {
 .stride-together__link {
   width: fit-content;
 }
+
+.footer {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  padding: 30px 20px;
+  color: var(--color-white);
+}
+
+.footer__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.footer__separator {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__separator--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__social-links {
+  display: flex;
+  gap: 8px;
+}
 /* ============================================================
    2. TABLET STYLES (800px and up)
    This overrides mobile styles once the screen hits 800px.
@@ -358,6 +417,23 @@ button {
 
   .mission {
     height: 550px;
+  }
+
+  .footer {
+    height: 700px;
+  }
+
+  .footer__background {
+    height: 700px;
+  }
+
+  .footer__separator--wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__container {
+    width: 50%;
   }
 }
 
