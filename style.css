@@ -125,6 +125,30 @@ li {
   color: var(--color-lime);
   padding: 12px 19px;
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  padding-inline: 20px;
+  margin-top: 30px;
+  z-index: 10;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-white);
+}
+.header__link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.header__link-events {
+  text-decoration: underline;
+}
+
 .hero {
   position: relative;
   padding: 12px 20px;
