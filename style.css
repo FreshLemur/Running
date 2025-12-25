@@ -106,6 +106,10 @@ li {
   letter-spacing: -3%;
 }
 
+.hero__button-wrapper {
+  position: relative;
+}
+
 .hero__btn {
   display: flex;
   justify-content: center;
@@ -116,6 +120,44 @@ li {
   border-radius: 24.5px;
   background-color: var(--color-lime);
   color: #3c6638;
+  transition: background 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background: transparent;
+    + .voltage__svg {
+      opacity: 1;
+    }
+  }
+}
+
+.voltage__svg {
+  display: block;
+  position: absolute;
+  top: -0.75em;
+  left: -0.25em;
+  width: calc(100% + 0.5em);
+  height: calc(100% + 1.5em);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+  transition-delay: 0.1s;
+}
+
+.voltage__path {
+  stroke-dasharray: 100;
+  filter: url('#glow');
+}
+.voltage__path--1 {
+  stroke: #f6de8d;
+  stroke-dashoffset: 0;
+  animation: spark-1 3s linear infinite;
+}
+
+.voltage__path--2 {
+  stroke: #6bfeff;
+  stroke-dashoffset: 500;
+  animation: spark-2 3s linear infinite;
 }
 
 .link--newsletter {
@@ -383,6 +425,63 @@ li {
   display: flex;
   gap: 8px;
 }
+
+.footer__title-symbol {
+  display: inline-block;
+}
+
+.footer__title-symbol:nth-of-type(2) {
+  animation-delay: 0.05s;
+}
+.footer__title-symbol:nth-of-type(3) {
+  animation-delay: 0.1s;
+}
+.footer__title-symbol:nth-of-type(4) {
+  animation-delay: 0.15s;
+}
+.footer__title-symbol:nth-of-type(5) {
+  animation-delay: 0.2s;
+}
+.footer__title-symbol:nth-of-type(6) {
+  animation-delay: 0.25s;
+}
+.footer__title-symbol:nth-of-type(7) {
+  animation-delay: 0.3s;
+}
+.footer__title-symbol:nth-of-type(8) {
+  animation-delay: 0.35s;
+}
+.footer__title-symbol:nth-of-type(9) {
+  animation-delay: 0.4s;
+}
+.footer__title-symbol:nth-of-type(10) {
+  animation-delay: 0.45s;
+}
+.footer__title-symbol:nth-of-type(11) {
+  animation-delay: 0.5s;
+}
+.footer__title-symbol:nth-of-type(12) {
+  animation-delay: 0.55s;
+}
+.footer__title-symbol:nth-of-type(13) {
+  animation-delay: 0.6s;
+}
+.footer__title-symbol:nth-of-type(14) {
+  animation-delay: 0.65s;
+}
+.footer__title-symbol:nth-of-type(15) {
+  animation-delay: 0.7s;
+}
+.footer__title-symbol:nth-of-type(16) {
+  animation-delay: 0.75s;
+}
+
+.seven span {
+  opacity: 0;
+  transform: translate(-150px, 0) scale(0.3);
+  animation: leftRight 0.5s forwards;
+}
+
 /* ============================================================
    2. TABLET STYLES (800px and up)
    This overrides mobile styles once the screen hits 800px.
@@ -517,5 +616,37 @@ li {
 
   .mission {
     height: 700px;
+  }
+}
+
+@keyframes spark-1 {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+@keyframes spark-2 {
+  to {
+    stroke-dashoffset: -500;
+  }
+}
+
+@keyframes leftRight {
+  40% {
+    transform: translate(50px, 0) scale(0.7);
+    opacity: 1;
+  }
+
+  60% {
+    color: var(--color-lime);
+  }
+
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
   }
 }
