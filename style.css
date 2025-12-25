@@ -108,6 +108,7 @@ li {
 
 .hero__button-wrapper {
   position: relative;
+  width: fit-content;
 }
 
 .hero__btn {
@@ -122,42 +123,43 @@ li {
   color: #3c6638;
   transition: background 0.3s;
 
+  transition: all 0.35s;
+  position: relative;
+  overflow: hidden;
+  &::before,
+  &::after {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100px) skewX(-15deg);
+    content: '';
+  }
+  &::before {
+    width: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(30px);
+    opacity: 0.5;
+  }
+  &::after {
+    width: 30px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    filter: blur(5px);
+  }
   &:hover {
-    cursor: pointer;
-    background: transparent;
-    + .voltage__svg {
+    background-color: #00000050;
+    color: #ffffff;
+
+    &::before {
       opacity: 1;
     }
+    &::before,
+    &::after {
+      transform: translateX(300px) skewX(-15deg);
+      transition: all 0.9s ease;
+    }
   }
-}
-
-.voltage__svg {
-  display: block;
-  position: absolute;
-  top: -0.75em;
-  left: -0.25em;
-  width: calc(100% + 0.5em);
-  height: calc(100% + 1.5em);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.4s;
-  transition-delay: 0.1s;
-}
-
-.voltage__path {
-  stroke-dasharray: 100;
-  filter: url('#glow');
-}
-.voltage__path--1 {
-  stroke: #f6de8d;
-  stroke-dashoffset: 0;
-  animation: spark-1 3s linear infinite;
-}
-
-.voltage__path--2 {
-  stroke: #6bfeff;
-  stroke-dashoffset: 500;
-  animation: spark-2 3s linear infinite;
 }
 
 .link--newsletter {
@@ -170,7 +172,44 @@ li {
   background-color: var(--color-gray-secondary);
   color: var(--color-lime);
   padding: 12px 19px;
+  transition: all 0.35s;
+
+  position: relative;
+  overflow: hidden;
+  &::before,
+  &::after {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100px) skewX(-15deg);
+    content: '';
+  }
+  &::before {
+    width: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(30px);
+    opacity: 0.5;
+  }
+  &::after {
+    width: 30px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    filter: blur(5px);
+  }
+  &:hover {
+    background-color: #00000050;
+    &::before {
+      opacity: 1;
+    }
+    &::before,
+    &::after {
+      transform: translateX(300px) skewX(-15deg);
+      transition: all 0.9s ease;
+    }
+  }
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -428,6 +467,9 @@ li {
 
 .footer__title-symbol {
   display: inline-block;
+  opacity: 0;
+  transform: translate(-150px, 0) scale(0.3);
+  animation: leftRight 0.5s forwards;
 }
 
 .footer__title-symbol:nth-of-type(2) {
@@ -474,12 +516,6 @@ li {
 }
 .footer__title-symbol:nth-of-type(16) {
   animation-delay: 0.75s;
-}
-
-.seven span {
-  opacity: 0;
-  transform: translate(-150px, 0) scale(0.3);
-  animation: leftRight 0.5s forwards;
 }
 
 /* ============================================================
