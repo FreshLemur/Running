@@ -106,6 +106,11 @@ li {
   letter-spacing: -3%;
 }
 
+.hero__button-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
 .hero__btn {
   display: flex;
   justify-content: center;
@@ -116,6 +121,45 @@ li {
   border-radius: 24.5px;
   background-color: var(--color-lime);
   color: #3c6638;
+  transition: background 0.3s;
+
+  transition: all 0.35s;
+  position: relative;
+  overflow: hidden;
+  &::before,
+  &::after {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100px) skewX(-15deg);
+    content: '';
+  }
+  &::before {
+    width: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(30px);
+    opacity: 0.5;
+  }
+  &::after {
+    width: 30px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    filter: blur(5px);
+  }
+  &:hover {
+    background-color: #00000050;
+    color: #ffffff;
+
+    &::before {
+      opacity: 1;
+    }
+    &::before,
+    &::after {
+      transform: translateX(300px) skewX(-15deg);
+      transition: all 0.9s ease;
+    }
+  }
 }
 
 .link--newsletter {
@@ -128,7 +172,44 @@ li {
   background-color: var(--color-gray-secondary);
   color: var(--color-lime);
   padding: 12px 19px;
+  transition: all 0.35s;
+
+  position: relative;
+  overflow: hidden;
+  &::before,
+  &::after {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100px) skewX(-15deg);
+    content: '';
+  }
+  &::before {
+    width: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(30px);
+    opacity: 0.5;
+  }
+  &::after {
+    width: 30px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    filter: blur(5px);
+  }
+  &:hover {
+    background-color: #00000050;
+    &::before {
+      opacity: 1;
+    }
+    &::before,
+    &::after {
+      transform: translateX(300px) skewX(-15deg);
+      transition: all 0.9s ease;
+    }
+  }
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -425,6 +506,60 @@ li {
   display: flex;
   gap: 8px;
 }
+
+.footer__title-symbol {
+  display: inline-block;
+  opacity: 0;
+  transform: translate(-150px, 0) scale(0.3);
+  animation: leftRight 0.5s forwards;
+}
+
+.footer__title-symbol:nth-of-type(2) {
+  animation-delay: 0.05s;
+}
+.footer__title-symbol:nth-of-type(3) {
+  animation-delay: 0.1s;
+}
+.footer__title-symbol:nth-of-type(4) {
+  animation-delay: 0.15s;
+}
+.footer__title-symbol:nth-of-type(5) {
+  animation-delay: 0.2s;
+}
+.footer__title-symbol:nth-of-type(6) {
+  animation-delay: 0.25s;
+}
+.footer__title-symbol:nth-of-type(7) {
+  animation-delay: 0.3s;
+}
+.footer__title-symbol:nth-of-type(8) {
+  animation-delay: 0.35s;
+}
+.footer__title-symbol:nth-of-type(9) {
+  animation-delay: 0.4s;
+}
+.footer__title-symbol:nth-of-type(10) {
+  animation-delay: 0.45s;
+}
+.footer__title-symbol:nth-of-type(11) {
+  animation-delay: 0.5s;
+}
+.footer__title-symbol:nth-of-type(12) {
+  animation-delay: 0.55s;
+}
+.footer__title-symbol:nth-of-type(13) {
+  animation-delay: 0.6s;
+}
+.footer__title-symbol:nth-of-type(14) {
+  animation-delay: 0.65s;
+}
+.footer__title-symbol:nth-of-type(15) {
+  animation-delay: 0.7s;
+}
+.footer__title-symbol:nth-of-type(16) {
+  animation-delay: 0.75s;
+}
+
 /* ============================================================
    2. TABLET STYLES (800px and up)
    This overrides mobile styles once the screen hits 800px.
@@ -559,6 +694,38 @@ li {
 
   .mission {
     height: 700px;
+  }
+}
+
+@keyframes spark-1 {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+@keyframes spark-2 {
+  to {
+    stroke-dashoffset: -500;
+  }
+}
+
+@keyframes leftRight {
+  40% {
+    transform: translate(50px, 0) scale(0.7);
+    opacity: 1;
+  }
+
+  60% {
+    color: var(--color-lime);
+  }
+
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
   }
 }
 
