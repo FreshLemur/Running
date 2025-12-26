@@ -231,14 +231,42 @@ li {
 .header__item-running {
   animation: fadeInSlideUpHeader 1.5s ease-out;
 }
+
+.header__link {
+  position: relative;
+  display: inline-block;
+}
+
+.header__link::after,
+.header__link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-lime), lime);
+
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.header__link::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.header__link:hover::after,
+.header__link:hover::before {
+  transform: scaleX(1);
+}
+
 .header__link-group {
   animation: fadeInSlideUpHeader 1.8s ease-out;
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-.header__link-events {
-  text-decoration: underline;
 }
 
 .hero {
