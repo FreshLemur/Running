@@ -2,19 +2,20 @@ const hero = document.querySelector('.hero');
 const strideTogether = document.querySelector('.stride-together');
 const strideTogetherContainer = document.querySelector('.stride-together__container');
 const raised = document.querySelector('.raised');
-const raisedTextGroup = document.querySelector('.raised__text-group');
-const cta = document.querySelector('.cta');
+const raisedContent = document.querySelector('.raised__content');
+const ctaBackground = document.querySelector('.cta__background');
 
 createObserver(hero);
-createObserver(strideTogether, '0px 0px -5% 0px');
-createObserver(strideTogetherContainer, '0px 0px -15% 0px');
+createObserver(strideTogether, '0px 0px -2% 0px');
+createObserver(strideTogetherContainer, '0px', 1);
 createObserver(raised, '0px 0px -15% 0px');
-createObserver(raisedTextGroup, '0px', animateValue);
-createObserver(cta, '0px 0px -15% 0px');
+createObserver(raisedContent, '0px', 1, animateValue);
+createObserver(ctaBackground, '0px 0px -15% 0px');
 
-function createObserver(block, customMargin, customFunction) {
+function createObserver(block, customMargin, customThreshold, customFunction) {
   const options = {
     rootMargin: customMargin || '0px',
+    threshold: customThreshold || 0,
   };
 
   function handleIntersect(entries, observer) {
