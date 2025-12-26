@@ -1,16 +1,14 @@
 const hero = document.querySelector('.hero');
 const strideTogether = document.querySelector('.stride-together');
 const strideTogetherContainer = document.querySelector('.stride-together__container');
-const raised = document.querySelector('.raised');
 const raisedContent = document.querySelector('.raised__content');
-const ctaBackground = document.querySelector('.cta__background');
+const cta = document.querySelector('.cta');
 
 createObserver(hero);
 createObserver(strideTogether, '0px 0px -2% 0px');
 createObserver(strideTogetherContainer, '0px', 1);
-createObserver(raised, '0px 0px -15% 0px');
 createObserver(raisedContent, '0px', 1, animateValue);
-createObserver(ctaBackground, '0px 0px -15% 0px');
+createObserver(cta, '0px', 0.7);
 
 function createObserver(block, customMargin, customThreshold, customFunction) {
   const options = {
