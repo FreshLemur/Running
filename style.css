@@ -304,7 +304,7 @@ li {
   animation: fadeInSlideUpHeader 1.8s ease-out;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 12px;
 }
 
 .hero {
