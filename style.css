@@ -219,14 +219,16 @@ li {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 60px;
   padding-inline: 20px;
-  margin-top: 30px;
+  padding-block: 8px;
+  backdrop-filter: blur(10px);
+  background-color: #00000010;
   z-index: 10;
 }
 .header__menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: var(--color-white);
 }
 .header__item-home {
