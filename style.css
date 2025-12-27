@@ -490,6 +490,14 @@ li {
   transition-delay: 2.5s;
 }
 
+.stride-together__link:hover img {
+  transform: rotateZ(-45deg);
+}
+
+.arrow-image {
+  transition: transform 0.3s ease-out;
+}
+
 .raised-cta-wrapper {
   display: flex;
   flex-direction: column;
