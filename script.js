@@ -3,12 +3,16 @@ const strideTogether = document.querySelector('.stride-together');
 const strideTogetherContainer = document.querySelector('.stride-together__container');
 const raisedContent = document.querySelector('.raised__content');
 const cta = document.querySelector('.cta');
+const footer = document.querySelector('.footer');
+const footerTitle = document.querySelector('.footer__title');
 
 createObserver(hero);
 createObserver(strideTogether, '0px 0px -2% 0px');
 createObserver(strideTogetherContainer, '0px', 1);
 createObserver(raisedContent, '0px', 1, animateValue);
 createObserver(cta, '0px', 0.7);
+createObserver(footer, '0px', 0.2);
+createObserver(footerTitle, '0px', 0.3);
 
 function createObserver(block, customMargin, customThreshold, customFunction) {
   const options = {
